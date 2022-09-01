@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}))
 app.get("/", function (req, res) {
     let dayy = date();
-    res.render("list", { titleName: dayy ,newitem:items})
+    res.render("index", { titleName: dayy ,newitem:items})
 })
 
 app.post("/",function(req,res){
@@ -29,7 +29,7 @@ app.post("/",function(req,res){
 })
 
 app.get("/work",function(req,res){
-    res.render("list",{titleName:"Work Items", newitem:workitems })
+    res.render("index",{titleName:"Work Items", newitem:workitems })
 })
 
 app.get("/about",function(req,res){
